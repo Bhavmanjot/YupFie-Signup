@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>YupFie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="signup.css">
+    </head>
+    <style>
+#all{
+  text-align: center;
+}
+input[type=text],input[type=email], input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 6px 6px 6px 6px;
+}
+input[type=text],input[type=email]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  opacity: 0.9;
+  border: none;
+}
+button:hover {
+  opacity: 1;
+}
+.signupbtn {
+  width: 50%;
+  border-radius: 32px;
+}
+.container {
+  padding: 16px;
+}
+.btn{
+  text-align: center;
+  margin-top: 40;
+}
+@media screen and (max-width: 300px) {
+  .signupbtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+#abc{
+  text-align: center;
+  font-family: Times New Roman;
+  font-weight: 850;
+  user-select: none;
+}
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+#gotologin{
+  float: right;
+  font-size: 15px;
+  margin-right: 15;
+}
+hr{
+  height: 5px;
+  background-color: #000;
+}
+#just{
+  font-size: 10px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 15;
+}
+    </style>
+    <body>
+      <header id="head">
+      <div id="Logo"><div class="back" onclick="history.back()" ><i class="fa fa-arrow-left"></i></div><div id="font"><p>Sign Up</p></div></div>
+      <div id="bottom"><p>You Can Signup Using-</p></div>
+     <div id="googlei">
+      <button id="google"><i class="fa fa-google"></i></button>
+      </div>
+      <hr></hr>
+      <form>
+        <div id="abc"><p>You Can Also Sign Up By Filling The Form Below:</p></div>
+<div id="all">
+  <input type="text" placeholder="Enter Username" name="text" required>
+  
+    <input id="email" type="email" placeholder="Enter Email" name="email" required>
+
+    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+   
+    <label id="just"><p>it would be better if you save your passwords in <b>Google Password Manager</b></p></label>
+
+</div>
+<div id="gotologin">Have An Account?<a href="signin.html"> Sign In</a></div>
+    <div class="btn">
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>  
+</body>
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+ import { getPerformance } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-performance.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyD0dNLxllpgAmBIRccwfRru4vwahOC5BJU",
+    authDomain: "yupfie-9b591.firebaseapp.com",
+    projectId: "yupfie-9b591",
+    storageBucket: "yupfie-9b591.appspot.com",
+    messagingSenderId: "150689725877",
+    appId: "1:150689725877:web:d5d87e92427eb567be6dfc",
+    measurementId: "G-J9F305KPKE"
+  };
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const perf = getPerformance(app);
+
+</script>
+<script src="signup.js"></script>
+</html>

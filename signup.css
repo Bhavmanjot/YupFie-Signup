@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#Logo{
+  color: #ffffff;
+  height: 60px;
+  background-color: #000000;
+  font-weight: 850;
+  font-family: Times New Roman;
+  user-select: none;
+  width:100%;
+}
+#font{
+ text-align: center;
+ font-size: 45px;
+}
+.back{
+  float: left;
+  font-size: 45px;
+  position: absolute;
+}
+#bottom{
+  text-align: center;
+  user-select: none;
+  font-size: 25px;
+  font-family: Times New Roman;
+  font-weight: 800;
+  color: #000000;
+  margin-top: 20;
+}
+#googlei{
+  text-align: center;
+  user-select: none;
+}
+#google{
+  width: 150px;
+  height: 55px;
+  color: #000000;
+  background-color: #ffffff;
+  border: #000 2px solid ;
+  border-radius: 32px;
+  margin-top: 10;
+  font-size: 25px;
+  font-family: Arial;
+  font-weight: 650;
+}
