@@ -1,7 +1,7 @@
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
 
 const auth = getAuth();
-createUserWithEmailAndPassword(auth, signupbtn, email, password)
+createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
@@ -11,4 +11,7 @@ createUserWithEmailAndPassword(auth, signupbtn, email, password)
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
+  });
+  $("signupbtn").click(function() {
+    submit();
   });
