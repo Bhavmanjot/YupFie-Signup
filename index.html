@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>YupFie</title>
@@ -96,7 +95,7 @@ hr{
       <form>
         <div id="abc"><p>You Can Also Sign Up By Filling The Form Below:</p></div>
 <div id="all">
-  <input type="text" placeholder="Enter Username" name="text" required>
+  <input id="name" type="text" placeholder="Enter Username" name="text" required>
   
     <input id="email" type="email" placeholder="Enter Email" name="email" required>
 
@@ -113,9 +112,11 @@ hr{
 </form>  
 </body>
  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
- import { getPerformance } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-performance.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+import { getPerformance } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-performance.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyD0dNLxllpgAmBIRccwfRru4vwahOC5BJU",
@@ -124,11 +125,14 @@ const firebaseConfig = {
     storageBucket: "yupfie-9b591.appspot.com",
     messagingSenderId: "150689725877",
     appId: "1:150689725877:web:d5d87e92427eb567be6dfc",
+    databaseURL: "https://yupfie-9b591-default-rtdb.firebaseio.com",
     measurementId: "G-J9F305KPKE"
-  };
+};
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const database = getDatabase(app);
+const auth = getAuth(app);
 const perf = getPerformance(app);
 
 </script>
